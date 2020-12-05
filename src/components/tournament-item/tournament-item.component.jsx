@@ -16,39 +16,36 @@ function TournamentItem({
       image: images ? images.default.filePath : "/",
       description: description,
     };
-
-    // console.log(favorite);
-
-    // console.log("HHHHHHHHHHHHH", user);
-
     addFavorite(favorite, user);
   };
 
   return (
-    // <div>
-    //   {images ? <img className="round-img" src={`https://cdn-images.win.gg/${images.default.filePath}`} /> : null}
-    //   <div>
-    //     <h3>{title}</h3>
-    //     <p>{description}</p>
-    //   </div>
-    // </div>
-
     <li
       title="Click to add favorites"
       className="collection-item avatar tournament-item"
       onClick={handleClick}
     >
-      {images ? (
-        <img
-          alt=""
-          className="circle"
-          src={`https://cdn-images.win.gg/${images.default.filePath}`}
-        />
-      ) : null}
-      <p className="title flow-text">
-        <b>{title}</b>
-      </p>
-      <p>{description}</p>
+      <div className="row">
+        <div className="col s3">
+          {images ? (
+            <img
+              alt=""
+              className="circle"
+              src={`https://cdn-images.win.gg/${images.default.filePath}`}
+            />
+          ) : null}
+        </div>
+        <div className="col s9">
+          <p className="title flow-text">
+            <b>{title}</b>
+          </p>
+        </div>
+      </div>
+      <div className="row">
+        <div className="col s12">
+          <p>{description}</p>
+        </div>
+      </div>
     </li>
   );
 }
