@@ -10,16 +10,18 @@ function Navbar() {
   return (
     <nav>
       <div className="nav-wrapper">
-        <a href="#" className="brand-logo" onClick={(e) => e.preventDefault()}>
-          Tournament Search
+        <a href="#" className="small brand-logo left" onClick={(e) => e.preventDefault()}>
+          Tournaments
         </a>
         <ul className="right">
           <li>
             <a
               href="#modal1"
               className="waves-effect waves-light btn red lighten-3 modal-trigger"
+              onClick={(e) => e.preventDefault()}
             >
-              Favorites
+              <i class="medium material-icons">favorite_border</i>
+              
             </a>
           </li>
         </ul>
