@@ -8,7 +8,6 @@ function Favorites({ favorites }) {
   favoriteTournaments = favorites.map((favorite) => {
     return <FavoriteItem key={favorite._id} tournament={favorite} />;
   });
-  console.log(favorites);
   return (
     <div id="modal1" className="modal">
       <div className="modal-content">

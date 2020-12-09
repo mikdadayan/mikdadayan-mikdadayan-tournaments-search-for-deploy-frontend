@@ -2,10 +2,7 @@ import { Fragment } from "react";
 import { connect } from "react-redux";
 
 import TournamentItem from "../tournament-item/tournament-item.component";
-// import Spinner from "../spinner/spinner.component";
-
 function TournamentList({ tournaments }) {
-  // console.log(tournaments)
   const allTournaments = tournaments.map((tournament) => (
     <TournamentItem key={tournament.id} tournament={tournament} />
   ));
