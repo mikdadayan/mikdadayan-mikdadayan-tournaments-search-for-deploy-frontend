@@ -1,18 +1,19 @@
+import React from "react";
 import { useEffect } from "react";
 import M from "materialize-css";
+import Header from "../header/header.component";
 
-function Navbar() {
+
+export default React.memo ( function Navbar() {
   useEffect(() => {
     let elems = document.querySelectorAll(".modal");
     let instances = M.Modal.init(elems, {});
   }, []);
-
+  console.log("Navigation")
   return (
     <nav>
       <div className="nav-wrapper">
-        <a href="#" className="small brand-logo left" onClick={(e) => e.preventDefault()}>
-          Tournaments
-        </a>
+        <Header/>
         <ul className="right">
           <li>
             <a
@@ -20,7 +21,7 @@ function Navbar() {
               className="waves-effect waves-light btn red lighten-3 modal-trigger"
               onClick={(e) => e.preventDefault()}
             >
-              <i class="medium material-icons">favorite_border</i>
+              <i className="medium material-icons">favorite_border</i>
               
             </a>
           </li>
@@ -28,6 +29,6 @@ function Navbar() {
       </div>
     </nav>
   );
-}
+})
 
-export default Navbar;
+// export default Navbar;
