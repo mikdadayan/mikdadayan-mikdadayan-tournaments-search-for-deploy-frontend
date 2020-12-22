@@ -9,7 +9,6 @@ export default React.memo ( function Navbar() {
     let elems = document.querySelectorAll(".modal");
     let instances = M.Modal.init(elems, {});
   }, []);
-  console.log("Navigation")
   return (
     <nav>
       <div className="nav-wrapper">
