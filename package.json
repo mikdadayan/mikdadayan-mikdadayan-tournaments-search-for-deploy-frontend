@@ -30,7 +30,6 @@
     "redux-thunk": "^2.3.0"
   },
   "scripts": {
-    "predeploy": "rpn run build",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
