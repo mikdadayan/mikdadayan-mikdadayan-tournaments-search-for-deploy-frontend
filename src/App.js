@@ -1,51 +1,26 @@
-import SearchBox from "./components/search-box/search-box.component.jsx";
-import TournamentList from "./components/tournament-list/tournament-list.component.jsx";
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route
+} from "react-router-dom";
+
 import Nav from "./components/navbar/navbar.component.jsx";
-import Favorites from "./components/favorites/favorites.component.jsx";
+import Home from "./pages/home.component.jsx";
 
-
-import { getFavoriteTournaments } from "./redux/tournament/tournament.actions";
 
 import "./App.css";
-import { useEffect } from "react";
-import { connect } from "react-redux";
 
-function App({ getFavoriteTournaments }) {
-  useEffect(async () => {
-    // Get saved data from localStorage
-    let user = localStorage.getItem("user_id");
-    getFavoriteTournaments(user);
-  }, []);
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
-  };
-
+function App() {
   return (
     <div className="App">
       <Nav />
-      <div className="container">
-        <div className="card">
-          <div className="card-content">
-            <SearchBox handleSubmit={handleSubmit} />
-          </div>
-        </div>
-        <div className="row">
-        <Favorites />
-
-          <div className="col s12">
-            <TournamentList />
-            </div>
-        </div>
-
-      </div>
+      <Switch>
+				<Route exact path="/" component={Home} />
+			</Switch>
       
     </div>
   );
 }
 
-const mapStateToProps = (state) => ({
-  tournaments: state.tournaments.tournaments,
-});
 
-export default connect(mapStateToProps, { getFavoriteTournaments })(App);
+export default App;
