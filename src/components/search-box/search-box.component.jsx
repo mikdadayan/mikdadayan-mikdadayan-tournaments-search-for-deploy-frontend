@@ -20,7 +20,6 @@ function SearchBox({ handleSubmit, getTournaments }) {
   const handleChange = (e) => {
     setSearchText(e.target.value);
   };
-  console.log("SearchBox")
   return (
     <Fragment>
       <form onSubmit={handleSubmit} className="col item-form " action="">
