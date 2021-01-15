@@ -7,7 +7,6 @@ function TournamentItem({
   addFavorite,
   tournament: { id, images, title, description },
 }) {
-  // let user
   const handleClick = () => {
     let user = localStorage.getItem("user_id");
     const favorite = {
