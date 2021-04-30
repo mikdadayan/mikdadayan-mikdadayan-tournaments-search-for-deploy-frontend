@@ -5,5 +5,3 @@
 2. npm install
 3. npm start
 
-# Live
-https://powerful-journey-62004.herokuapp.com/
